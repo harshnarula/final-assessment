@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Activity</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <form id="form">
+        <h1 class="header1">Activity</h1>
+        <table>
+            <tr>
+                <td><label>Activity</label></td>
+                <td><input type="text" class="input" name="activity" id="activity" placeholder="Enter Your Activity" required></td>
+                <td><span class="error" id="activity_error"></span></td>
+            </tr>
+            <tr>
+                <td><label>Start Date</label></td>
+                <td><input type="date" class="input" name="startdate" id="startdate" placeholder="Enter Start Date" required></td>
+                <td><span class="error" id="startdate_error"></span></td>
+            </tr>
+            <tr>
+                <td><label>End Date</label></td>
+                <td><input type="date" class="input" name="enddate" id="enddate" placeholder="Enter End Date" required></td>
+                <td><span class="error" id="enddate_error"></span></td>
+            </tr>
+            <tr>
+                <td><label>Status</label></td>
+                <td>
+                    <select name="status" id="status" required>
+                        <option value="" disabled selected>Select Status</option>
+                        <option value="Started">Started</option>
+                        <option value="Not Started">Not Started</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Due Passed">Due Passed</option>
+                    </select>
+                    <td><span class="error" id="status_error"></span></td>
+                </td>
+            </tr>
+        </table>
+        <button type="submit" id="btn" class="btn">Submit</button>
+    </form>
+
+    <h2 class="header2">Activity Status</h2>
+    <input type="search" id="search" class="input" placeholder="Search" onclick="searchTable()">
+    <table id="view" class="hidden">
+        <thead>
+            <tr>
+                <th>Activity Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+    <script src="script.js" async defer></script>
+</body>
+</html>
